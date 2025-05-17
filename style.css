@@ -1,0 +1,293 @@
+:root {
+      --bg-color: #f4f4f4;
+      --card-bg: #ffffff;
+      --task-bg: #e9e9e9;
+      --text-color: #000;
+      --button-bg: #007bff;
+      --button-text: #fff;
+      --section-title-color: #007bff;
+      --task-hover: rgba(0, 0, 0, 0.05);
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --card-bg: #2c2c2c;
+      --task-bg: #3a3a3a;
+      --text-color: #eaeaea;
+           --button-bg: #007bff;
+
+      --button-text: #fff;
+      --section-title-color: #4da6ff;
+      --task-hover: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--text-color);
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    #themeToggle {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      padding: 10px 16px;
+      font-size: 14px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    #themeToggle:hover {
+      opacity: 0.85;
+    }
+
+    /* FILTER BUTTONS CONTAINER */
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .filter-buttons button {
+      padding: 10px 24px;
+      font-size: 15px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      transition: background-color 0.3s, box-shadow 0.3s;
+      min-width: 100px;
+      user-select: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    .filter-buttons button:hover {
+      background-color: #0056b3;
+      box-shadow: 0 5px 15px rgba(0,86,179,0.4);
+    }
+
+    .filter-buttons button.active {
+      background-color: #003d80;
+      box-shadow: 0 5px 18px rgba(0,61,128,0.7);
+    }
+
+    .add-task {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 30px;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .add-task input,
+    .add-task textarea {
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: none;
+      width: 100%;
+      background-color: var(--task-bg);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .add-task button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .add-task button:hover {
+      opacity: 0.9;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .task-section {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      background: var(--card-bg);
+      color: var(--text-color);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .task-section h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: var(--section-title-color);
+      font-size: 22px;
+    }
+
+    .task {
+      background: var(--task-bg);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      cursor: grab;
+      transition: transform 0.2s, background 0.3s;
+      color: var(--text-color);
+    }
+
+    .task:hover {
+      background: var(--task-hover);
+    }
+
+    .task input[type="text"],
+    .task textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      font-size: 15px;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .task h3 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+    }
+
+    .task p {
+      margin: 0 0 10px;
+      font-size: 15px;
+    }
+
+    .task button {
+      margin-right: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      transition: background-color 0.3s;
+    }
+
+    .task button:hover {
+      opacity: 0.9;
+    }
+
+    .drop-hover {
+      background-color: #d1f7d6 !important;
+      transition: background 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .task-section {
+        width: 90%;
+      }
+
+      .add-task {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .add-task input,
+      .add-task textarea,
+      .add-task button {
+        font-size: 15px;
+        
+      }
+      .add-task button {
+        background-color: #007bff;
+        
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #themeToggle {
+        position: static;
+        display: block;
+        margin: 10px auto 30px auto;
+        width: 140px;
+        font-size: 13px;
+        padding: 8px 12px;
+      }
+
+      .filter-buttons {
+        gap: 10px;
+      }
+      .task-section{
+         width: 90%;
+      }
+
+      .filter-buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+        min-width: 90px;
+        background-color: #007bff;
+      }
+
+      .task h3 {
+        font-size: 16px;
+      }
+
+      .task p,
+      .task textarea {
+        font-size: 14px;
+      }
+
+      .task button {
+        font-size: 13px;
+        padding: 5px 10px;
+        background-color: #007bff;
+      }
+    }
