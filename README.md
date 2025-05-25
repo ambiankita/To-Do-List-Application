@@ -5,7 +5,6 @@ User can add,delete,view all the tasks and manage incomplete and complete tasks 
 
 Features:
 
-
 Add new task
 
 Edit existing task
@@ -13,7 +12,6 @@ Edit existing task
 Delete task
 
 Manage complete and incomplete tasks
-
 
 Technologies Used:
 
