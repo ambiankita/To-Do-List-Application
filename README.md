@@ -7,13 +7,22 @@ Features:
 
 
 Add new task
+
 Edit existing task
+
 Delete task
+
 Manage complete and incomplete tasks
 
+
 Technologies Used:
+
 HTML
+
 CSS
+
 JAVASCRIPT
+
+
 LocalStorage for data persistence
 
